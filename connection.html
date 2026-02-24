@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Raven Technology - Drone Connection</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1598514983318-2f64f8f4796c');
+    background-size:cover;
+    background-position:center;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    background:white;
+    width:420px;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+}
+
+.container h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#2e7d32;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+.input-group label{
+    font-size:14px;
+    font-weight:500;
+}
+
+.input-group input{
+    width:100%;
+    padding:10px;
+    margin-top:6px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    outline:none;
+}
+
+.input-group input:focus{
+    border-color:#2e7d32;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#2e7d32;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#145a1f;
+}
+
+.status{
+    margin-top:15px;
+    text-align:center;
+    font-size:14px;
+    font-weight:500;
+}
+
+.error{
+    color:red;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Drone Connection Portal</h2>
+
+    <form onsubmit="connectDrone(event)">
+        
+        <div class="input-group">
+            <label>User ID</label>
+            <input type="text" id="userid" required>
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="password" required>
+        </div>
+
+        <div class="input-group">
+            <label>Location</label>
+            <input type="text" id="location" placeholder="Eg: Chennai, Tamil Nadu" required>
+        </div>
+
+        <div class="input-group">
+            <label>Drone Model Name</label>
+            <input type="text" id="modelname" placeholder="Eg: Raven X1" required>
+        </div>
+
+        <div class="input-group">
+            <label>Model Number</label>
+            <input type="text" id="modelnumber" placeholder="Eg: RX1-2026" required>
+        </div>
+
+        <button type="submit">Connect</button>
+
+        <div class="status" id="statusMsg"></div>
+
+    </form>
+</div>
+
+<script>
+function connectDrone(event){
+    event.preventDefault();
+
+    const user = document.getElementById("userid").value;
+    const password = document.getElementById("password").value;
+    const location = document.getElementById("location").value;
+    const modelName = document.getElementById("modelname").value;
+    const modelNumber = document.getElementById("modelnumber").value;
+
+    if(user && password && location && modelName && modelNumber){
+
+        // Store data for details page
+        localStorage.setItem("userID", user);
+        localStorage.setItem("location", location);
+        localStorage.setItem("modelName", modelName);
+        localStorage.setItem("modelNumber", modelNumber);
+
+        // Redirect to details page
+        window.location.href = "details.html";
+
+    } else {
+        document.getElementById("statusMsg").innerHTML = 
+        "<span class='error'>❌ Please fill all details.</span>";
+    }
+}
+</script>
+
+</body>
+</html>

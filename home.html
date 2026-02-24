@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Raven Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#f4f9f4;
+    color:#333;
+}
+
+/* NAVBAR */
+nav{
+    background:#1b5e20;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav h2{
+    color:white;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#a5d6a7;
+}
+
+/* HERO */
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.btn{
+    padding:12px 25px;
+    background:#2e7d32;
+    color:white;
+    border:none;
+    border-radius:6px;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:20px;
+}
+
+/* SECTION COMMON */
+section{
+    padding:80px 8%;
+    text-align:center;
+}
+
+section h2{
+    color:#2e7d32;
+    margin-bottom:40px;
+}
+
+/* ABOUT */
+.about p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.6;
+}
+
+/* WEATHER */
+.weather-box{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    display:inline-block;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* REVIEWS */
+.reviews{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.review-card{
+    background:white;
+    padding:20px;
+    width:300px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ACHIEVEMENTS */
+.achievements{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.ach-card{
+    background:white;
+    padding:30px;
+    width:250px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.ach-card h3{
+    font-size:28px;
+    color:#1b5e20;
+}
+
+/* REPORT */
+.report{
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    max-width:800px;
+    margin:auto;
+    text-align:left;
+}
+
+/* ENQUIRY */
+form{
+    max-width:400px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:10px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:10px;
+    background:#2e7d32;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:900px){
+    nav ul{
+        flex-wrap:wrap;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h2>Raven Technology</h2>
+    <ul>
+        <li><a href="front.html">Home</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="connection.html">Connection</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="help.html">Help</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Smart AI Agricultural Drone</h1>
+        <p>Transforming Agriculture with Intelligence & Innovation</p>
+        <a href="report.html" class="btn">View Drone Report</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <h2>About Us</h2>
+    <p>
+        Raven Technology delivers AI-integrated agricultural drones for crop monitoring,
+        precision spraying, climate intelligence, and real-time farm analytics.
+    </p>
+</section>
+
+<!-- WEATHER -->
+<section>
+    <h2>Weather Condition</h2>
+    <div class="weather-box">
+        <h3>Chennai, Tamil Nadu</h3>
+        <p>🌤 Temperature: 32°C</p>
+        <p>💧 Humidity: 70%</p>
+        <p>🌬 Wind Speed: 12 km/h</p>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+    <h2>Drone Gallery</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1598514983318-2f64f8f4796c">
+        <img src="https://images.unsplash.com/photo-1581093588401-22f5c5e30e6b">
+        <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section>
+    <h2>Farmer Reviews</h2>
+    <div class="reviews">
+        <div class="review-card">
+            <p>"Raven drone improved my crop yield significantly!"</p>
+            <strong>- Ramesh</strong>
+        </div>
+        <div class="review-card">
+            <p>"Precision spraying reduced pesticide cost."</p>
+            <strong>- Kumar</strong>
+        </div>
+        <div class="review-card">
+            <p>"Weather insights help in better planning."</p>
+            <strong>- Lakshmi</strong>
+        </div>
+    </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section>
+    <h2>Our Achievements</h2>
+    <div class="achievements">
+        <div class="ach-card">
+            <h3>150+</h3>
+            <p>Farms Served</p>
+        </div>
+        <div class="ach-card">
+            <h3>25%</h3>
+            <p>Yield Increase</p>
+        </div>
+        <div class="ach-card">
+            <h3>98%</h3>
+            <p>Customer Satisfaction</p>
+        </div>
+    </div>
+</section>
+
+<!-- ENQUIRY -->
+<section>
+    <h2>Enquiry</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Raven Technology | Smart Farming Solutions
+</footer>
+
+</body>
+</html>
